@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WebNova - Premier Web Development & Digital Experience Agency. Building modern, high-performance websites, UI/UX designs, and scalable digital solutions. CodSoft Web Development Internship Task 2.">
+  <meta name="keywords" content="Web Development, WebNova, Digital Agency, UI/UX Design, SEO, Responsive Web, CodSoft Internship">
+  <meta name="author" content="CodSoft Web Development Intern">
+  
+  <title>WebNova | Modern Web Development & Digital Experiences</title>
+  
+  <!-- Favicon (Inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%234f46e5'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><path d='M30 65 L45 35 L55 52 L62 40 L72 65 Z' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/><circle cx='68' cy='32' r='5' fill='%2338bdf8'/></svg>">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons (Free CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="logo" aria-label="WebNova Home">
+        <span class="logo-icon">
+          <i class="fa-solid fa-cube"></i>
+        </span>
+        <span class="logo-text">Web<span class="gradient-text">Nova</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#why-us" class="nav-link">Why Choose Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#developer" class="nav-link">Meet Developer</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact Me</a>
+          </li>
+        </ul>
+        
+        <!-- Mobile Menu Auth Actions (Visible only inside mobile drawer) -->
+        <div class="mobile-nav-cta">
+          <button type="button" class="btn btn-secondary btn-block btn-auth-trigger" data-auth="login">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <span>Log In</span>
+          </button>
+          <button type="button" class="btn btn-primary btn-block btn-auth-trigger" data-auth="signup">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Sign Up</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Header Actions: Login & Sign Up Buttons, Hamburger -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-outline-nav btn-auth-trigger" data-auth="login" id="nav-login-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span>Log In</span>
+        </button>
+        <button type="button" class="btn btn-primary btn-nav-signup btn-auth-trigger" data-auth="signup" id="nav-signup-btn">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Sign Up</span>
+        </button>
+
+        <!-- Hamburger Button -->
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Backdrop Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <!-- Background Ambient Glows -->
+      <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+      <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
+      
+      <div class="container hero-container">
+        <!-- Hero Left Column: Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span class="badge-text"><i class="fa-solid fa-sparkles"></i> Transforming Ideas Into Reality</span>
+          </div>
+
+          <h1 class="hero-title">
+            We Build <span class="gradient-text">Digital Experiences</span> That Matter
+          </h1>
+
+          <p class="hero-description">
+            WebNova is an innovative web development agency creating high-performing, 
+            visually stunning, and conversion-focused websites that elevate brands and 
+            accelerate digital growth.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span>Get Started</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#services" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>Explore Services</span>
+            </a>
+          </div>
+
+          <!-- Hero Concept Showcase / Student Project Tag -->
+          <div class="hero-trust">
+            <div class="trust-avatars">
+              <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80');"></div>
+              <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80');"></div>
+              <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80');"></div>
+              <div class="avatar avatar-badge">DEMO</div>
+            </div>
+            <div class="trust-text">
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>Agency Concept Showcase &bull; <strong>CodSoft Task 2 Project</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Web Dev Tech Illustration -->
+        <div class="hero-visual">
+          <div class="illustration-wrapper">
+            <!-- Central Browser Mockup Card -->
+            <div class="browser-card">
+              <div class="browser-header">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="browser-search-bar">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>https://webnova.agency</span>
+                </div>
+                <div class="browser-icon">
+                  <i class="fa-solid fa-sliders"></i>
+                </div>
+              </div>
+              <div class="browser-body">
+                <div class="code-editor-header">
+                  <span class="tab active"><i class="fa-brands fa-html5"></i> index.html</span>
+                  <span class="tab"><i class="fa-brands fa-css3-alt"></i> style.css</span>
+                  <span class="tab"><i class="fa-brands fa-js"></i> app.js</span>
+                </div>
+                <div class="code-preview">
+                  <div class="code-line"><span class="token-comment">&lt;!-- Building Next-Gen Web --&gt;</span></div>
+                  <div class="code-line"><span class="token-keyword">const</span> <span class="token-var">webnova</span> = <span class="token-keyword">new</span> <span class="token-class">DigitalAgency</span>({</div>
+                  <div class="code-line indent"><span class="token-prop">design</span>: <span class="token-string">"Pixel-Perfect"</span>,</div>
+                  <div class="code-line indent"><span class="token-prop">speed</span>: <span class="token-string">"Ultra-Fast"</span>,</div>
+                  <div class="code-line indent"><span class="token-prop">seoOptimized</span>: <span class="token-bool">true</span>,</div>
+                  <div class="code-line indent"><span class="token-prop">impact</span>: <span class="token-string">"10x Conversions"</span></div>
+                  <div class="code-line">});</div>
+                  <div class="code-line"><span class="token-var">webnova</span>.<span class="token-func">launchSuccess</span>(); <span class="token-comment">// 🚀</span></div>
+                </div>
+                <!-- Mini Stats Progress inside Mockup -->
+                <div class="mockup-metrics">
+                  <div class="mock-metric">
+                    <span>Performance</span>
+                    <div class="mock-bar"><div class="fill" style="width: 98%;"></div></div>
+                    <strong>98%</strong>
+                  </div>
+                  <div class="mock-metric">
+                    <span>SEO Score</span>
+                    <div class="mock-bar"><div class="fill" style="width: 100%;"></div></div>
+                    <strong>100%</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Accent Badge 1: Analytics Growth -->
+            <div class="floating-badge badge-analytics">
+              <div class="badge-icon bg-success">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-label">Traffic Growth</span>
+                <span class="badge-value">+285% YoY</span>
+              </div>
+            </div>
+
+            <!-- Floating Accent Badge 2: Tech Stack -->
+            <div class="floating-badge badge-tech">
+              <div class="badge-icon bg-primary">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-label">Modern Stack</span>
+                <span class="badge-value">React &bull; Node &bull; Cloud</span>
+              </div>
+            </div>
+
+            <!-- Floating Accent Badge 3: Design Review -->
+            <div class="floating-badge badge-rating">
+              <div class="badge-icon bg-purple">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-label">Excellence</span>
+                <span class="badge-value">A+ Agency Rating</span>
+              </div>
+            </div>
+
+            <!-- Ambient Glow Sphere behind illustration -->
+            <div class="illustration-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Banner / Logo Strip -->
+      <div class="container hero-banner">
+        <p class="banner-title">Crafting solutions with industry-leading modern technologies</p>
+        <div class="tech-icons-strip">
+          <div class="tech-item"><i class="fa-brands fa-html5"></i> <span>HTML5</span></div>
+          <div class="tech-item"><i class="fa-brands fa-css3-alt"></i> <span>CSS3</span></div>
+          <div class="tech-item"><i class="fa-brands fa-js"></i> <span>JavaScript</span></div>
+          <div class="tech-item"><i class="fa-brands fa-react"></i> <span>React</span></div>
+          <div class="tech-item"><i class="fa-brands fa-node-js"></i> <span>Node.js</span></div>
+          <div class="tech-item"><i class="fa-brands fa-figma"></i> <span>Figma</span></div>
+          <div class="tech-item"><i class="fa-brands fa-github"></i> <span>Git</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- About Image / Media Column -->
+          <div class="about-media">
+            <div class="media-card-wrapper">
+              <div class="about-image-card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" 
+                     alt="WebNova Creative Agency Team collaborating on digital web development projects" 
+                     class="about-img" 
+                     loading="lazy">
+                <div class="about-overlay-gradient"></div>
+              </div>
+              
+              <!-- Floating Concept Card -->
+              <div class="about-exp-badge">
+                <div class="exp-number"><span>Task</span><span class="plus"> 2</span></div>
+                <div class="exp-label">CodSoft Level 1 Project</div>
+              </div>
+
+              <!-- Floating Guarantee Card -->
+              <div class="about-mini-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                  <strong>100% Quality Driven</strong>
+                  <p>Guaranteed performance & clean code</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Text Content Column -->
+          <div class="about-content">
+            <div class="section-tag">
+              <i class="fa-solid fa-compass"></i>
+              <span>About WebNova</span>
+            </div>
+            
+            <h2 class="section-title">
+              Who <span class="gradient-text">We Are</span>
+            </h2>
+
+            <p class="section-subtitle">
+              Passionate creators, engineers, and digital strategists turning bold ideas into scalable web realities.
+            </p>
+
+            <p class="about-description">
+              At WebNova, we combine engineering rigor with high-end aesthetic design. We don't just write code; 
+              we build seamless digital ecosystems that solve complex business challenges, boost brand authority, 
+              and convert visitors into lifelong brand champions.
+            </p>
+
+            <!-- Key Feature Points -->
+            <div class="about-features-list">
+              <div class="about-feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div>
+                  <h4>Bespoke Architectural Engineering</h4>
+                  <p>Tailored web systems built specifically for your business goals, not generic templates.</p>
+                </div>
+              </div>
+
+              <div class="about-feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div>
+                  <h4>User-Centric Visual Design</h4>
+                  <p>Intuitive interfaces engineered through user research, empathy, and seamless usability.</p>
+                </div>
+              </div>
+
+              <div class="about-feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div>
+                  <h4>High Velocity & Continuous Support</h4>
+                  <p>On-time delivery backed by post-launch care, continuous updates, and security monitoring.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- About CTAs -->
+            <div class="about-action">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Our Work</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="founder-quote">
+                <i class="fa-solid fa-quote-left"></i>
+                <span>"Excellence is not an act, but a standard we code into every project."</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics Counter Grid (Technical & Architecture Metrics) -->
+        <div class="stats-grid" id="stats-counter-section">
+          <!-- Metric 1: Responsive Design -->
+          <div class="stat-card">
+            <div class="stat-icon-wrapper">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number counter" data-target="100">0</span>
+              <span class="stat-suffix">%</span>
+            </div>
+            <h3 class="stat-title">Responsive Design</h3>
+            <p class="stat-desc">Mobile-first fluid layouts for all devices.</p>
+          </div>
+
+          <!-- Metric 2: Services Showcased -->
+          <div class="stat-card">
+            <div class="stat-icon-wrapper">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number counter" data-target="6">0</span>
+              <span class="stat-suffix">+</span>
+            </div>
+            <h3 class="stat-title">Services Showcased</h3>
+            <p class="stat-desc">Comprehensive digital agency capabilities.</p>
+          </div>
+
+          <!-- Metric 3: Pure Code (No heavy external frameworks) -->
+          <div class="stat-card">
+            <div class="stat-icon-wrapper">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number counter" data-target="0">0</span>
+              <span class="stat-suffix"></span>
+            </div>
+            <h3 class="stat-title">Heavy Frameworks</h3>
+            <p class="stat-desc">Pure semantic HTML5, CSS3 &amp; Vanilla JS.</p>
+          </div>
+
+          <!-- Metric 4: Optimization Target -->
+          <div class="stat-card">
+            <div class="stat-icon-wrapper">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number counter" data-target="98">0</span>
+              <span class="stat-suffix">%</span>
+            </div>
+            <h3 class="stat-title">Performance Score</h3>
+            <p class="stat-desc">Optimized asset delivery and clean code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="services-section section-padding bg-light" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>What We Offer</span>
+          </div>
+          <h2 class="section-title">
+            Comprehensive <span class="gradient-text">Digital Services</span>
+          </h2>
+          <p class="section-subtitle">
+            From initial wireframes to global cloud deployment, we provide end-to-end web solutions 
+            designed to scale your brand and accelerate revenue.
+          </p>
+        </div>
+
+        <!-- Services Cards Grid (6 Services) -->
+        <div class="services-grid">
+          <!-- Service Card 1: Web Development -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon bg-gradient-1">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span class="service-num">01</span>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">
+              Custom full-stack web applications built with modern architectures, clean modular code, 
+              and lightning-fast load speeds for maximum engagement.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Single Page & Jamstack Apps</li>
+              <li><i class="fa-solid fa-check"></i> REST & GraphQL API Integration</li>
+              <li><i class="fa-solid fa-check"></i> Scalable Database Architecture</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>Request a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 2: UI/UX Design -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon bg-gradient-2">
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+              <span class="service-num">02</span>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-description">
+              Crafting visually intoxicating, intuitive, and human-first user experiences that captivate 
+              audiences and make complex workflows feel effortless.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Wireframing & Interactive Prototypes</li>
+              <li><i class="fa-solid fa-check"></i> Design Systems & Component Libraries</li>
+              <li><i class="fa-solid fa-check"></i> Usability & Accessibility Audits</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>Request a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 3: Responsive Website Design -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon bg-gradient-3">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <span class="service-num">03</span>
+            </div>
+            <h3 class="service-title">Responsive Website Design</h3>
+            <p class="service-description">
+              Ensuring your web presence looks flawless and behaves seamlessly across smartphones, 
+              tablets, laptops, and ultra-wide desktop monitors.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Mobile-First Adaptive Layouts</li>
+              <li><i class="fa-solid fa-check"></i> Cross-Browser Compatibility</li>
+              <li><i class="fa-solid fa-check"></i> Fluid Typography & Dynamic Media</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>Request a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 4: SEO Optimization -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon bg-gradient-4">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <span class="service-num">04</span>
+            </div>
+            <h3 class="service-title">SEO Optimization</h3>
+            <p class="service-description">
+              Elevate organic search visibility, outrank competitors, and attract high-intent traffic 
+              through deep technical SEO, structured data, and content tuning.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Core Web Vitals Optimization</li>
+              <li><i class="fa-solid fa-check"></i> Schema Markup & Meta Architecture</li>
+              <li><i class="fa-solid fa-check"></i> Keyword Strategy & Competitor Analysis</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>Request a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 5: Digital Marketing -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon bg-gradient-5">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <span class="service-num">05</span>
+            </div>
+            <h3 class="service-title">Digital Marketing</h3>
+            <p class="service-description">
+              Strategic, data-driven marketing campaigns that expand your brand voice, acquire verified leads, 
+              and generate measurable return on your advertising spend.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Conversion Rate Optimization (CRO)</li>
+              <li><i class="fa-solid fa-check"></i> Social Media & Performance Ads</li>
+              <li><i class="fa-solid fa-check"></i> Email Funnels & Analytics Reporting</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>Request a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 6: Website Maintenance -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon bg-gradient-6">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <span class="service-num">06</span>
+            </div>
+            <h3 class="service-title">Website Maintenance</h3>
+            <p class="service-description">
+              Round-the-clock proactive monitoring, vulnerability patching, database backups, 
+              and technical support to keep your site fast, secure, and always operational.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> 24/7 Uptime & Performance Monitoring</li>
+              <li><i class="fa-solid fa-check"></i> Regular Security Audits & Updates</li>
+              <li><i class="fa-solid fa-check"></i> Automated Cloud Backups & Recovery</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>Request a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US SECTION ==================== -->
+    <section class="why-us-section section-padding" id="why-us">
+      <div class="container">
+        <div class="why-us-wrapper">
+          <!-- Why Us Left Header Area -->
+          <div class="why-us-intro">
+            <div class="section-tag">
+              <i class="fa-solid fa-trophy"></i>
+              <span>Our Competitive Edge</span>
+            </div>
+            <h2 class="section-title">
+              Why Choose <span class="gradient-text">WebNova</span>
+            </h2>
+            <p class="section-subtitle">
+              We stand apart through our obsession with technical quality, human connection, 
+              and tangible business results. Here is why industry leaders trust us.
+            </p>
+
+            <div class="why-us-banner-badge">
+              <div class="badge-icon">
+                <i class="fa-solid fa-handshake-angle"></i>
+              </div>
+              <div>
+                <h4>Your Dedicated Technology Partner</h4>
+                <p>We work collaboratively as an extension of your core team, aligning every line of code with your vision.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Us 4 Pillars Grid -->
+          <div class="why-grid">
+            <!-- Pillar 1: Experienced Team -->
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <h3 class="why-title">Experienced Team</h3>
+              <p class="why-text">
+                Seasoned senior engineers, creative UI/UX artists, and certified cloud architects with 
+                years of hands-on experience delivering complex digital platforms.
+              </p>
+              <div class="why-footer-tag">
+                <i class="fa-solid fa-circle-check"></i> 100% In-House Experts
+              </div>
+            </div>
+
+            <!-- Pillar 2: Modern Technologies -->
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <h3 class="why-title">Modern Technologies</h3>
+              <p class="why-text">
+                We leverage cutting-edge frameworks, headless CMS, modern CSS Grid/Flexbox, 
+                and automated CI/CD pipelines to build lightning-fast, future-proof applications.
+              </p>
+              <div class="why-footer-tag">
+                <i class="fa-solid fa-circle-check"></i> Zero Outdated Code
+              </div>
+            </div>
+
+            <!-- Pillar 3: Creative Solutions -->
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h3 class="why-title">Creative Solutions</h3>
+              <p class="why-text">
+                Every business is unique. We devise out-of-the-box creative strategies, custom 
+                micro-interactions, and bespoke web architecture that make your brand memorable.
+              </p>
+              <div class="why-footer-tag">
+                <i class="fa-solid fa-circle-check"></i> Bespoke Brand Identity
+              </div>
+            </div>
+
+            <!-- Pillar 4: On-Time Delivery -->
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fa-solid fa-stopwatch"></i>
+              </div>
+              <h3 class="why-title">On-Time Delivery</h3>
+              <p class="why-text">
+                Rigorous agile sprints, transparent milestone reporting, and dedicated project management 
+                ensure we launch your project on schedule and strictly on budget.
+              </p>
+              <div class="why-footer-tag">
+                <i class="fa-solid fa-circle-check"></i> Agile Milestone Tracking
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="projects-section section-padding bg-light" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Featured Portfolio</span>
+          </div>
+          <h2 class="section-title">
+            Our Recent <span class="gradient-text">Masterpieces</span>
+          </h2>
+          <p class="section-subtitle">
+            Curated concept projects engineered to showcase UI/UX design, modern layouts, 
+            and frontend capabilities [Design Showcase].
+          </p>
+        </div>
+
+        <!-- Project Cards Grid (3 Cards) -->
+        <div class="projects-grid">
+          <!-- Project 1: NovaPay Fintech -->
+          <article class="project-card">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" 
+                   alt="NovaPay Modern Fintech Dashboard and Mobile Banking Application" 
+                   class="project-img" 
+                   loading="lazy">
+              <div class="project-overlay">
+                <div class="overlay-actions">
+                  <a href="#contact" class="project-btn" aria-label="View NovaPay Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="#contact" class="project-btn" aria-label="View NovaPay Source Code">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="project-category">Fintech Concept &bull; Web App</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Chart.js</span>
+                <span class="tech-pill">Tailwind</span>
+                <span class="tech-pill">REST API</span>
+              </div>
+              <h3 class="project-title">NovaPay &mdash; Next-Gen Financial Dashboard</h3>
+              <p class="project-description">
+                A sleek, data-rich financial portal featuring real-time crypto asset tracking, 
+                automated multi-currency conversions, and bank-grade security protocols.
+              </p>
+              <div class="project-footer">
+                <a href="#contact" class="project-read-more">
+                  <span>Explore Case Study</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: CloudSphere SaaS -->
+          <article class="project-card">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" 
+                   alt="CloudSphere Enterprise SaaS Cloud Infrastructure Management Platform" 
+                   class="project-img" 
+                   loading="lazy">
+              <div class="project-overlay">
+                <div class="overlay-actions">
+                  <a href="#contact" class="project-btn" aria-label="View CloudSphere Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="#contact" class="project-btn" aria-label="View CloudSphere Source Code">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="project-category">SaaS Analytics Concept</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">CSS Grid</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">AWS</span>
+              </div>
+              <h3 class="project-title">CloudSphere &mdash; Cloud Analytics Platform</h3>
+              <p class="project-description">
+                An enterprise observability dashboard for monitoring microservice latency, server 
+                health, automated alerting, and cost-reduction insights in real-time.
+              </p>
+              <div class="project-footer">
+                <a href="#contact" class="project-read-more">
+                  <span>Explore Case Study</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: AuraCommerce -->
+          <article class="project-card">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" 
+                   alt="AuraCommerce Luxury E-Commerce Platform with AI recommendations" 
+                   class="project-img" 
+                   loading="lazy">
+              <div class="project-overlay">
+                <div class="overlay-actions">
+                  <a href="#contact" class="project-btn" aria-label="View AuraCommerce Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="#contact" class="project-btn" aria-label="View AuraCommerce Source Code">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="project-category">Luxury E-Commerce Concept</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tech-pill">Headless Shopify</span>
+                <span class="tech-pill">UI/UX</span>
+                <span class="tech-pill">Stripe</span>
+                <span class="tech-pill">SEO</span>
+              </div>
+              <h3 class="project-title">AuraCommerce &mdash; AI-Powered E-Shop</h3>
+              <p class="project-description">
+                A high-conversion luxury retail storefront featuring instant headless checkout, 
+                dynamic 3D product previews, and personalized AI styling recommendations.
+              </p>
+              <div class="project-footer">
+                <a href="#contact" class="project-read-more">
+                  <span>Explore Case Study</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project CTA Bar -->
+        <div class="projects-cta-box">
+          <div class="cta-text">
+            <h3>Have an ambitious web project in mind?</h3>
+            <p>Let's collaborate to build an award-winning digital experience for your brand.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <span>Start Your Project</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MEET THE DEVELOPER SECTION ==================== -->
+    <section class="developer-section section-padding" id="developer">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-user-graduate"></i>
+            <span>Developer Profile</span>
+          </div>
+          <h2 class="section-title">
+            Meet the <span class="gradient-text">Developer</span>
+          </h2>
+          <p class="section-subtitle">
+            BCA Student at Galgotias University &bull; CodSoft Web Development Intern
+          </p>
+        </div>
+
+        <div class="developer-card">
+          <!-- Developer Header / Intro -->
+          <div class="developer-header">
+            <div class="developer-avatar-wrapper">
+              <div class="developer-avatar" aria-label="Satyam Kumar Initials">
+                <span>SK</span>
+              </div>
+              <div class="developer-status">
+                <span class="status-indicator"></span>
+                <span>Active Intern</span>
+              </div>
+            </div>
+
+            <div class="developer-intro">
+              <div class="developer-name-role">
+                <h3 class="developer-name">Satyam Kumar</h3>
+                <span class="developer-badge"><i class="fa-solid fa-graduation-cap"></i> BCA Student &ndash; Galgotias University</span>
+              </div>
+              <div class="developer-location-tag">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Noida, India</span>
+              </div>
+              <p class="developer-bio">
+                I am a BCA student passionate about web development, creating modern websites and learning new technologies.
+              </p>
+
+              <!-- Developer Social / Profile Action Buttons -->
+              <div class="developer-action-buttons">
+                <a href="https://github.com/satyam07-prog" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-dev-profile">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub Profile</span>
+                </a>
+                <a href="https://www.linkedin.com/in/satyam-kumar-a1a675362" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-dev-profile">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  <span>LinkedIn Profile</span>
+                </a>
+                <a href="#contact" class="btn btn-outline-primary btn-dev-profile">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Contact Me</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Developer Info Grid -->
+          <div class="developer-info-grid">
+            <!-- Detail 1: Developer Name -->
+            <div class="dev-info-box">
+              <div class="dev-info-icon bg-gradient-1">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="dev-info-content">
+                <span class="dev-info-label">Full Name</span>
+                <span class="dev-info-value">Satyam Kumar</span>
+              </div>
+            </div>
+
+            <!-- Detail 2: Degree / Course -->
+            <div class="dev-info-box">
+              <div class="dev-info-icon bg-gradient-2">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="dev-info-content">
+                <span class="dev-info-label">Course / Degree</span>
+                <span class="dev-info-value">Bachelor of Computer Applications (BCA)</span>
+              </div>
+            </div>
+
+            <!-- Detail 3: University -->
+            <div class="dev-info-box">
+              <div class="dev-info-icon bg-gradient-3">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="dev-info-content">
+                <span class="dev-info-label">University</span>
+                <span class="dev-info-value">Galgotias University</span>
+              </div>
+            </div>
+
+            <!-- Detail 4: Location -->
+            <div class="dev-info-box">
+              <div class="dev-info-icon bg-gradient-4">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="dev-info-content">
+                <span class="dev-info-label">Location</span>
+                <span class="dev-info-value">Noida, India</span>
+              </div>
+            </div>
+
+            <!-- Detail 5: Internship -->
+            <div class="dev-info-box">
+              <div class="dev-info-icon bg-gradient-5">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="dev-info-content">
+                <span class="dev-info-label">Internship Program</span>
+                <span class="dev-info-value">CodSoft Web Development Internship</span>
+              </div>
+            </div>
+
+            <!-- Detail 6: Assigned Task -->
+            <div class="dev-info-box">
+              <div class="dev-info-icon bg-gradient-6">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <div class="dev-info-content">
+                <span class="dev-info-label">Assigned Project</span>
+                <span class="dev-info-value">Level 1 &ndash; Task 2 (Web Development Agency)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Internship Highlight Banner -->
+          <div class="developer-highlight-strip">
+            <div class="highlight-item">
+              <i class="fa-solid fa-certificate"></i>
+              <span>CodSoft Web Development Internship &ndash; Level 1 Task 2</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-user-check"></i>
+              <span>Satyam Kumar &bull; BCA Student, Galgotias University &bull; Noida, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ME SECTION ==================== -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Get In Touch</span>
+          </div>
+          <h2 class="section-title">
+            Contact <span class="gradient-text">Me</span>
+          </h2>
+          <p class="section-subtitle">
+            Have a question, feedback, or a web development project idea? Reach out to me directly through any channel below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Personal Contact Information & Buttons -->
+          <div class="contact-info-panel">
+            <div class="info-card-header">
+              <h3>Contact Information</h3>
+              <p>Connect directly with Satyam Kumar via email, phone, or professional networks.</p>
+            </div>
+
+            <!-- Contact Detail Cards -->
+            <div class="contact-details">
+              <!-- Item 1: Full Name -->
+              <div class="contact-item">
+                <div class="contact-icon bg-gradient-1">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-label">Full Name</span>
+                  <span class="contact-val">Satyam Kumar</span>
+                  <span class="contact-subtext">BCA Student &bull; Galgotias University</span>
+                </div>
+              </div>
+
+              <!-- Item 2: Email -->
+              <div class="contact-item">
+                <div class="contact-icon bg-gradient-2">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-label">Email Address</span>
+                  <a href="mailto:satyam29092003@gmail.com" class="contact-val">satyam29092003@gmail.com</a>
+                  <span class="contact-subtext">Click to open default email client</span>
+                </div>
+              </div>
+
+              <!-- Item 3: Phone -->
+              <div class="contact-item">
+                <div class="contact-icon bg-gradient-3">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-label">Phone Number</span>
+                  <a href="tel:9934898024" class="contact-val">+91 9934898024</a>
+                  <span class="contact-subtext">Click to call directly</span>
+                </div>
+              </div>
+
+              <!-- Item 4: Location -->
+              <div class="contact-item">
+                <div class="contact-icon bg-gradient-4">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-label">Location</span>
+                  <address class="contact-val not-italic">Noida, India</address>
+                  <span class="contact-subtext">Uttar Pradesh, India</span>
+                </div>
+              </div>
+
+              <!-- Item 5: GitHub Profile -->
+              <div class="contact-item">
+                <div class="contact-icon bg-gradient-5">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-label">GitHub Profile</span>
+                  <a href="https://github.com/satyam07-prog" target="_blank" rel="noopener noreferrer" class="contact-val">github.com/satyam07-prog</a>
+                  <span class="contact-subtext">View repositories &amp; open source code</span>
+                </div>
+              </div>
+
+              <!-- Item 6: LinkedIn Profile -->
+              <div class="contact-item">
+                <div class="contact-icon bg-gradient-6">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-label">LinkedIn Profile</span>
+                  <a href="https://www.linkedin.com/in/satyam-kumar-a1a675362" target="_blank" rel="noopener noreferrer" class="contact-val">Satyam Kumar on LinkedIn</a>
+                  <span class="contact-subtext">Connect professionally on LinkedIn</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Contact Action Buttons -->
+            <div class="contact-action-buttons-group">
+              <a href="mailto:satyam29092003@gmail.com" class="btn btn-primary contact-btn-action" aria-label="Send email to Satyam Kumar">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email Me</span>
+              </a>
+              <a href="tel:9934898024" class="btn btn-secondary contact-btn-action" aria-label="Call Satyam Kumar">
+                <i class="fa-solid fa-phone"></i>
+                <span>Call Me</span>
+              </a>
+              <a href="https://github.com/satyam07-prog" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-btn-action" aria-label="Open Satyam Kumar's GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/satyam-kumar-a1a675362" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-btn-action" aria-label="Open Satyam Kumar's LinkedIn Profile in a new tab">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <div class="form-header">
+              <h3>Send Me a Message</h3>
+              <p>Fill out the form below to get in touch. I will respond to your inquiry as soon as possible.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <!-- Name & Email Row -->
+              <div class="form-row">
+                <!-- Name Field -->
+                <div class="form-group">
+                  <label for="user-name" class="form-label">Full Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" id="user-name" name="name" class="form-control" placeholder="Your Name" required autocomplete="name">
+                  </div>
+                  <span class="error-feedback" id="name-error">Please enter your full name (minimum 2 characters).</span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                  <label for="user-email" class="form-label">Email Address <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="user-email" name="email" class="form-control" placeholder="you@example.com" required autocomplete="email">
+                  </div>
+                  <span class="error-feedback" id="email-error">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-group">
+                <label for="user-subject" class="form-label">Subject <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <input type="text" id="user-subject" name="subject" class="form-control" placeholder="e.g. Internship Feedback / Project Collaboration" required>
+                </div>
+                <span class="error-feedback" id="subject-error">Please provide a subject for your inquiry.</span>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="user-message" class="form-label">Your Message <span class="required">*</span></label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-solid fa-message input-icon textarea-icon"></i>
+                  <textarea id="user-message" name="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <span class="error-feedback" id="message-error">Please enter a detailed message (minimum 10 characters).</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span class="btn-text">Send Message to Satyam</span>
+                <i class="fa-solid fa-paper-plane btn-icon"></i>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+
+              <p class="form-privacy-note">
+                <i class="fa-solid fa-shield"></i> Your information will only be used to reply to your message.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <!-- Footer Column 1: Brand Info -->
+        <div class="footer-col footer-col-brand">
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-icon">
+              <i class="fa-solid fa-cube"></i>
+            </span>
+            <span class="logo-text">Web<span class="gradient-text">Nova</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            WebNova is a forward-thinking web development agency. We engineer bespoke, 
+            high-converting digital experiences with contemporary design and robust code.
+          </p>
+          <div class="footer-social-icons">
+            <a href="https://www.linkedin.com/in/satyam-kumar-a1a675362" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/satyam07-prog" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:satyam29092003@gmail.com" aria-label="Email Satyam Kumar"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:9934898024" aria-label="Call Satyam Kumar"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+
+        <!-- Footer Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="#why-us"><i class="fa-solid fa-angle-right"></i> Why Choose Us</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Projects Portfolio</a></li>
+            <li><a href="#developer"><i class="fa-solid fa-angle-right"></i> Meet the Developer</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Contact Me</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Web Development</a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> UI/UX Experience Design</a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Responsive Web Design</a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Technical SEO</a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Digital Marketing</a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Website Maintenance</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 4: Newsletter -->
+        <div class="footer-col footer-col-newsletter">
+          <h4 class="footer-col-title">Stay Connected</h4>
+          <p class="newsletter-desc">
+            Subscribe to our monthly web innovation newsletter for insights on modern tech, UI trends, and web speed optimization.
+          </p>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletter-email" placeholder="Your email address" required aria-label="Newsletter email input">
+              <button type="submit" class="btn btn-primary newsletter-btn" aria-label="Subscribe to newsletter">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <span class="newsletter-feedback" id="newsletter-feedback"></span>
+          </form>
+          <div class="codsoft-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>CodSoft Web Development Internship &bull; Level 1 Task 2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; <span id="current-year">2026</span> <strong>WebNova Agency</strong>. All Rights Reserved.</p>
+          <p class="footer-developer-credit">
+            Designed &amp; Developed by <strong>Satyam Kumar</strong>
+          </p>
+          <p class="footer-internship-credit">
+            CodSoft Web Development Internship &ndash; Level 1 Task 2
+          </p>
+          <p class="footer-student-meta">
+            BCA Student &bull; Galgotias University &bull; Noida, India
+          </p>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="mailto:satyam29092003@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+          <span class="separator">&bull;</span>
+          <a href="https://github.com/satyam07-prog" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+          <span class="separator">&bull;</span>
+          <a href="https://www.linkedin.com/in/satyam-kumar-a1a675362" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== AUTH MODAL (LOGIN & SIGN UP) ==================== -->
+  <div class="auth-modal-overlay" id="auth-modal-overlay" aria-hidden="true">
+    <div class="auth-modal-card" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <!-- Modal Close Button -->
+      <button type="button" class="auth-modal-close" id="auth-modal-close" aria-label="Close authentication modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="auth-modal-header">
+        <div class="logo auth-logo">
+          <span class="logo-icon"><i class="fa-solid fa-cube"></i></span>
+          <span class="logo-text">Web<span class="gradient-text">Nova</span></span>
+        </div>
+        <h3 id="auth-modal-title">Welcome Back</h3>
+        <p id="auth-modal-subtitle">Frontend interactive demo featuring client-side form validation (No backend database)</p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="auth-tabs" role="tablist">
+        <button type="button" class="auth-tab-btn active" id="tab-login-btn" role="tab" aria-selected="true" data-tab="login">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span>Log In</span>
+        </button>
+        <button type="button" class="auth-tab-btn" id="tab-signup-btn" role="tab" aria-selected="false" data-tab="signup">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Sign Up</span>
+        </button>
+      </div>
+
+      <!-- Login Form View -->
+      <form class="auth-form active" id="login-form" novalidate>
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="login-email" class="form-label">Email Address <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-envelope input-icon"></i>
+            <input type="email" id="login-email" class="form-control" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <span class="error-feedback" id="login-email-error">Please enter a valid email address.</span>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <div class="label-row">
+            <label for="login-password" class="form-label">Password <span class="required">*</span></label>
+            <a href="#home" class="forgot-link" id="forgot-password-link">Forgot Password?</a>
+          </div>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required autocomplete="current-password">
+            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <span class="error-feedback" id="login-password-error">Password must be at least 6 characters.</span>
+        </div>
+
+        <!-- Remember Me Checkbox -->
+        <div class="auth-options">
+          <label class="custom-checkbox">
+            <input type="checkbox" id="remember-me" checked>
+            <span class="checkmark"></span>
+            <span class="checkbox-label">Remember me for 30 days</span>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block btn-auth-submit" id="login-submit-btn">
+          <span class="btn-text">Log In</span>
+          <i class="fa-solid fa-arrow-right btn-icon"></i>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+
+        <div class="auth-switch-prompt">
+          <span>Don't have an account yet?</span>
+          <button type="button" class="switch-to-tab" data-target="signup">Create account</button>
+        </div>
+      </form>
+
+      <!-- Sign Up Form View -->
+      <form class="auth-form" id="signup-form" novalidate>
+        <!-- Full Name Field -->
+        <div class="form-group">
+          <label for="signup-name" class="form-label">Full Name <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-user input-icon"></i>
+            <input type="text" id="signup-name" class="form-control" placeholder="Satyam Kumar" required autocomplete="name">
+          </div>
+          <span class="error-feedback" id="signup-name-error">Please enter your full name (min 2 characters).</span>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="signup-email" class="form-label">Email Address <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-envelope input-icon"></i>
+            <input type="email" id="signup-email" class="form-control" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <span class="error-feedback" id="signup-email-error">Please enter a valid email address.</span>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="signup-password" class="form-label">Password <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="signup-password" class="form-control" placeholder="At least 6 characters" required autocomplete="new-password">
+            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <span class="error-feedback" id="signup-password-error">Password must be at least 6 characters.</span>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="form-group">
+          <label for="signup-confirm-password" class="form-label">Confirm Password <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-shield-halved input-icon"></i>
+            <input type="password" id="signup-confirm-password" class="form-control" placeholder="Re-enter password" required autocomplete="new-password">
+          </div>
+          <span class="error-feedback" id="signup-confirm-password-error">Passwords do not match.</span>
+        </div>
+
+        <!-- Terms Agreement -->
+        <div class="auth-options">
+          <label class="custom-checkbox">
+            <input type="checkbox" id="terms-agree" required>
+            <span class="checkmark"></span>
+            <span class="checkbox-label">I agree to the <a href="#home">Terms of Service</a> &amp; <a href="#home">Privacy Policy</a></span>
+          </label>
+          <span class="error-feedback" id="terms-error">You must accept the terms to create an account.</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block btn-auth-submit" id="signup-submit-btn">
+          <span class="btn-text">Create Free Account</span>
+          <i class="fa-solid fa-user-plus btn-icon"></i>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+
+        <div class="auth-switch-prompt">
+          <span>Already have an account?</span>
+          <button type="button" class="switch-to-tab" data-target="login">Log In here</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== FLOATING BACK TO TOP BUTTON ==================== -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>
